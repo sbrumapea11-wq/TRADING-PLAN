@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trading Plan Calculator</title>
+
+    <link rel="stylesheet" href="Trading Plan.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>📈 Trading Plan Calculator</h1>
+
+            <p class="subtitle">
+                Gold & Oil Trading Planning
+            </p>
+
+            <hr>
+
+            <div class="form-group">
+
+                <label>Modal ($)</label>
+
+                <input type="number" id="modal" placeholder="Contoh : 10000">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Jumlah Lot</label>
+
+                <input type="number" id="lot" step="0.01" placeholder="Contoh : 1">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Instrumen</label>
+
+                <select id="instrument">
+
+                    <option value="gold">
+                        Gold (XAUUSD)
+                    </option>
+
+                    <option value="oil">
+                        Oil (USOIL)
+                    </option>
+
+                </select>
+
+            </div>
+
+            <button onclick="hitungTrading()">
+
+                HITUNG TRADING PLAN
+
+            </button>
+
+        </div>
+
+        <div class="card hasil">
+
+            <h2>Hasil Perhitungan</h2>
+
+            <table>
+
+                <tr>
+                    <td>Profit Bersih</td>
+                    <td id="profit">$0</td>
+                </tr>
+
+                <tr>
+                    <td>Margin</td>
+                    <td id="margin">$0</td>
+                </tr>
+
+                <tr>
+                    <td>Ketahanan Dana</td>
+                    <td id="ketahananDana">0 Point</td>
+                </tr>
+
+                <tr>
+                    <td>Contract Size</td>
+                    <td id="cs">0</td>
+                </tr>
+
+                <tr>
+                    <td>SP</td>
+                    <td id="sp">0</td>
+                </tr>
+
+                <tr>
+                    <td>Ketahanan Normal</td>
+                    <td id="normal">0</td>
+                </tr>
+
+                <tr>
+                    <td>Ketahanan Hectic</td>
+                    <td id="hectic">0</td>
+                </tr>
+
+                <tr>
+                    <td>Return Normal</td>
+                    <td id="returnNormal">0%</td>
+                </tr>
+
+                <tr>
+                    <td>Return Hectic</td>
+                    <td id="returnHectic">0%</td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <b>Range Persentase</b>
+                    </td>
+
+                    <td id="range">
+
+                        <b>0% - 0%</b>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <b>Risk Level</b>
+                    </td>
+
+                    <td id="risk">
+
+                        -
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="Trading Plan.js"></script>
+
+</body>
+
+</html>

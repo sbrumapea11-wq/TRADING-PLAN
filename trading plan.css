@@ -1,0 +1,339 @@
+/* ================================
+   TRADING PLAN CALCULATOR
+   Created by ChatGPT
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+.container{
+
+    width:100%;
+    max-width:1200px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+}
+
+/*========================*/
+
+.card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+/*========================*/
+
+h1{
+
+    color:#FFD700;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    font-size:32px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#d1d5db;
+
+    margin-bottom:25px;
+
+}
+
+/*========================*/
+
+hr{
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+    margin-bottom:25px;
+
+}
+
+/*========================*/
+
+.form-group{
+
+    margin-bottom:22px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    color:white;
+
+    margin-bottom:8px;
+
+    font-weight:500;
+
+}
+
+input,
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#f8fafc;
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+input:focus,
+select:focus{
+
+    outline:none;
+
+    box-shadow:0 0 0 3px #FFD700;
+
+}
+
+/*========================*/
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    margin-top:10px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    background:linear-gradient(135deg,#FFD700,#ffae00);
+
+    color:#111827;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 25px rgba(255,215,0,.35);
+
+}
+
+/*========================*/
+
+.hasil h2{
+
+    color:#FFD700;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+/*========================*/
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+table tr{
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+table td{
+
+    padding:15px 5px;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+table td:last-child{
+
+    text-align:right;
+
+    font-weight:600;
+
+}
+
+/*========================*/
+
+#profit{
+
+    color:#22c55e;
+
+}
+
+#margin{
+
+    color:#38bdf8;
+
+}
+
+#normal{
+
+    color:#10b981;
+
+}
+
+#hectic{
+
+    color:#f59e0b;
+
+}
+
+#range{
+
+    color:#FFD700;
+
+    font-size:18px;
+
+}
+
+#risk{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+/*========================*/
+
+.success{
+
+    color:#22c55e !important;
+
+}
+
+.warning{
+
+    color:#f59e0b !important;
+
+}
+
+.danger{
+
+    color:#ef4444 !important;
+
+}
+
+/*========================*/
+
+.footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+}
+
+/*========================*/
+
+@media(max-width:900px){
+
+    .container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/*========================*/
+
+@media(max-width:600px){
+
+    body{
+
+        padding:20px;
+
+    }
+
+    .card{
+
+        padding:25px;
+
+    }
+
+    h1{
+
+        font-size:26px;
+
+    }
+
+    table td{
+
+        font-size:14px;
+
+    }
+
+}

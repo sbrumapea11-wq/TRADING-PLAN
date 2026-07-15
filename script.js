@@ -111,7 +111,7 @@ if (instrument == "gold") {
 
     }
 
-    else if (ketahananDana >= 150) {
+    else if (150> ketahananDana >300) {
 
         risk = "🟡 Waspada";
 
@@ -133,7 +133,7 @@ else {
 
     }
 
-    else if (ketahananDana >= 7) {
+    else if (7 > ketahananDana >= 15) {
 
         risk = "🟡 Waspada";
 

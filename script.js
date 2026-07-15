@@ -97,19 +97,21 @@ function hitungTrading() {
     let besar =
         Math.max(returnNormal, returnHectic);
 
-    //------------------------------------
-    // RISK LEVEL
-    //------------------------------------
+//------------------------------------
+// RISK LEVEL
+//------------------------------------
 
-    let risk = "";
+let risk = "";
 
-    if (besar >= 30) {
+if (instrument == "gold") {
+
+    if (ketahananDana >= 300) {
 
         risk = "🟢 Aman";
 
     }
 
-    else if (besar >= 15) {
+    else if (ketahananDana >= 150) {
 
         risk = "🟡 Waspada";
 
@@ -121,6 +123,29 @@ function hitungTrading() {
 
     }
 
+}
+
+else {
+
+    if (ketahananDana >= 15) {
+
+        risk = "🟢 Aman";
+
+    }
+
+    else if (ketahananDana >= 7) {
+
+        risk = "🟡 Waspada";
+
+    }
+
+    else {
+
+        risk = "🔴 Berisiko";
+
+    }
+
+}
     //------------------------------------
     // FORMAT ANGKA
     //------------------------------------

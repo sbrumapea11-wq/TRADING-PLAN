@@ -7,7 +7,7 @@ function hitungTrading() {
 
     const modal = parseFloat(document.getElementById("modal").value);
     const lot = parseFloat(document.getElementById("lot").value);
-
+    const spInput = parseFloat(document.getElementById("spInput").value);
     const instrument = document.getElementById("instrument").value;
 
     if (isNaN(modal) || modal <= 0) {
@@ -23,7 +23,13 @@ function hitungTrading() {
 
         return;
     }
+    if (isNaN(spInput) || spInput <= 0) {
 
+    alert("Masukkan Selisih Poin.");
+
+    return;
+
+    }
     //------------------------------------
     // DATA
     //------------------------------------
@@ -36,23 +42,23 @@ function hitungTrading() {
 
     if (instrument == "gold") {
 
-        margin = 1500;
-        normal = 150;
-        hectic = 300;
-        cs = 100;
-        sp = 5;
+    margin = 1500;
+    normal = 150;
+    hectic = 300;
+    cs = 100;
 
-    }
+}
 
-    else {
+else {
 
-        margin = 3000;
-        normal = 7;
-        hectic = 15;
-        cs = 1000;
-        sp = 0.3;
+    margin = 3000;
+    normal = 7;
+    hectic = 15;
+    cs = 1000;
 
-    }
+}
+
+sp = spInput;
 
     //------------------------------------
     // PROFIT
@@ -87,15 +93,11 @@ function hitungTrading() {
     let returnHectic =
         (profit / modalHectic) * 100;
 
-    //------------------------------------
-    // RANGE
-    //------------------------------------
+    let rangeNormal =
+        ((ketahananDana - normal) / normal) * 100;
 
-    let kecil =
-        Math.min(returnNormal, returnHectic);
-
-    let besar =
-        Math.max(returnNormal, returnHectic);
+    let rangeHectic =
+        ((ketahananDana - hectic) / hectic) * 100;
 
 //------------------------------------
 // RISK LEVEL
@@ -113,7 +115,7 @@ if (instrument == "gold") {
 
     else if (150> ketahananDana >300) {
 
-        risk = "🟡 Waspada";
+        risk = "🟡 CUKUP";
 
     }
 
@@ -135,7 +137,7 @@ else {
 
     else if (7 > ketahananDana >= 15) {
 
-        risk = "🟡 Waspada";
+        risk = "🟡 CUKUP";
 
     }
 
@@ -189,7 +191,8 @@ else {
         returnHectic.toFixed(2) + "%";
 
     document.getElementById("range").innerHTML =
-        kecil.toFixed(2) + "% - " + besar.toFixed(2) + "%";
+        rangeNormal.toFixed(2) + "% ~ " +
+        rangeHectic.toFixed(2) + "%";
 
     document.getElementById("risk").innerHTML =
         risk;
